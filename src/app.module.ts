@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ProductsModule } from './products/products.module';
-import { CommonModule } from './common/common.module';
-import { ImagesModule } from './images/images.module';
+
 import { SeedModule } from './seed/seed.module';
 import { FilesModule } from './files/files.module';
+import { CommonModule } from './common/common.module';
+import { ImagesModule } from './images/images.module';
+import { ProductsModule } from './products/products.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -25,6 +27,7 @@ import { FilesModule } from './files/files.module';
     ImagesModule,
     SeedModule,
     FilesModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
